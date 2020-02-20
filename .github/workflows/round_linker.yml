@@ -1,0 +1,12 @@
+name: round linker test
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  apply_labels:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: AnturK/round_linker@test
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
