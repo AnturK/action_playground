@@ -6,8 +6,8 @@ on:
 jobs:
   apply_labels:
     runs-on: ubuntu-latest
-    if: ${{ secrets.CompileChangelogs == true }}
     steps:
     - uses: AnturK/round_linker@master
+      if: ${{ secrets.CompileChangelogs == true }}
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
